@@ -1,0 +1,7 @@
+TanStack Query
+
+Zod
+
+react hook forms
+
+classnames

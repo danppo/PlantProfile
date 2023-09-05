@@ -1,25 +1,37 @@
 import { Button } from 'primereact/button';
 import { Chip } from 'primereact/chip';
+import { Title } from '../Title';
+import classNames from 'classnames';
+import styles from './PlantPage.module.scss';
 
 const PlantPage = () => {
   return (
     <>
-    <div className="grid grid-nogutter surface-0 text-800">
-    <div className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
-        <section>
-            <span className="block text-6xl font-bold mb-1">Create the screens</span>
-            <div className="text-6xl text-primary font-bold mb-3">your visitors deserve to see</div>
-            <p className="mt-0 mb-4 text-700 line-height-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div className={classNames('grid grid-nogutter surface-0 text-800', styles.HeroBanner)}>
+        <div className='col-12 lg:col-6 p-6 text-center lg:text-left flex flex-column justify-content-center align-items-center z-1'>
+          {/* <div className={styles.HeroText}> */}
+          <Title>Swiss Cheese Plant</Title>
+          {/* <span className='block text-6xl font-bold mb-1'>Swiss Cheese Plant</span> */}
+          <Title subTitle>Monstera Deliciosa</Title>
+          {/* <div className='text-6xl text-primary font-bold mb-3'>Monstera Deliciosa</div> */}
+          {/* <p className='mt-0 mb-4 text-700 line-height-3'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p> */}
 
-            <Button label="Learn More" type="button" className="mr-3 p-button-raised" />
-            <Button label="Live Demo" type="button" className="p-button-outlined" />
-        </section>
-    </div>
-    <div className="col-12 md:col-6 overflow-hidden">
-        <img src="/monstera.jpg" alt="hero-1" className="md:ml-auto block md:h-full" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0 100%)' }} />
-    </div>
-</div>
-    <div className='surface-0'>
+          <Button label='Learn More' type='button' className='mr-3 p-button-raised' />
+        </div>
+        <div
+          className={classNames(
+            'col-12 lg:col-6 overflow-hidden z-0 absolute lg:relative',
+            styles.HeroImage
+          )}
+        >
+          {/* <div className='bg-white opacity-80 z-1 lg:hidden absolute h-full w-full'></div> */}
+          <img src='/monstera.jpg' alt='hero-1' />
+        </div>
+      </div>
+      {/* <div className='surface-0'>
       <div className='font-medium text-3xl text-900 mb-3'>Movie Information</div>
       <div className='text-500 mb-5'>
         Morbi tristique blandit turpis. In viverra ligula id nulla hendrerit rutrum.
@@ -70,7 +82,7 @@ const PlantPage = () => {
           </div>
         </li>
       </ul>
-    </div>
+    </div> */}
     </>
   );
 };
