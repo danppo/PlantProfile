@@ -1,6 +1,6 @@
 import { Button } from 'primereact/button';
-import { Chip } from 'primereact/chip';
 import { Title } from '../Title';
+import PlantInfo from '../PlantInfo';
 import classNames from 'classnames';
 import styles from './PlantPage.module.scss';
 
@@ -83,6 +83,7 @@ const PlantPage = () => {
         </li>
       </ul>
     </div> */}
+      <PlantInfo></PlantInfo>
     </>
   );
 };
