@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import PlantPage from './components/PlantPage';
+import SubjectPage from './components/SubjectPage';
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import styles from './App.module.scss';
 //theme
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<PlantPage />}>
+        <Route path='/' element={<SubjectPage />}>
           {/* <Route index element={<Home />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
